@@ -18,6 +18,8 @@ const showCards = (array) => {
         <h6 class="card-subtitle mb-2 text-muted">${item.language}</h6>
         <p class="card-text">${item.description}</p>
         <p class="card-text">${item.time}</p>
+        <i id="edit-card-btn--${item.firebaseKey}" class="fas fa-edit"></i>
+        <i id="delete-card-btn--${item.firebaseKey}" class="fas fa-trash-alt"></i>
       </div>
     </div>`;
   });

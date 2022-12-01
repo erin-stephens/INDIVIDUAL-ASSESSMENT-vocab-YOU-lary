@@ -11,14 +11,15 @@ const addVocabForm = (obj = {}) => {
     </div>
     <div class="form-group">
       <label for="image">Definition</label>
-      <input type="text" class="form-control" id="definition" placeholder="Enter a definition" value="${obj.definition || ''}" required>
+      <input type="text" class="form-control" id="description" placeholder="Enter a definition" value="${obj.description || ''}" required>
     </div>
     <select class="form-select" aria-label="Default select example" id="language" value="${obj.language || ''}" required>
       <option selected>Choose a Language</option>
       <option value="HTML">HTML</option>
-      <option value="CSS">CSS</option>
+      <option value="SCSS">SCSS</option>
       <option value="JavaScript">JavaScript</option>
     </select>
+    <a id="time"></a>
     <button type="submit" class="btn btn-primary mt-3">Submit Vocab</button>
   </form>`;
 
