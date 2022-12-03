@@ -3,8 +3,17 @@
 
 
 body {
-  background-color: antiquewhite;
+  background-color: black;
   color: brown;
   text-align: center;
   margin-top: 100px;
+};
+
+#cardContainer {
+  display: flex;
+  flex: wrap;
+}
+
+.card {
+  width: 18em;
 }
