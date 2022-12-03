@@ -1,5 +1,6 @@
 const filterButtonRow = () => {
   const domString = `
+  <button id="allBtn" class="btn btn-danger">All Cards</button>
   <button id="htmlBtn" class="btn btn-danger">HTML</button>
   <button id="scssBtn" class="btn btn-danger">SCSS</button>
   <button id="javascriptBtn" class="btn btn-danger">JavaScript</button>`;

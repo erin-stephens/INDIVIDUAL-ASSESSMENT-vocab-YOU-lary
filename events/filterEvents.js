@@ -1,7 +1,12 @@
-import { htmlVocab, scssVocab, jsVocab } from '../api/vocabData';
+import {
+  getVocab, htmlVocab, scssVocab, jsVocab
+} from '../api/vocabData';
 import { showCards } from '../pages/vocab';
 
 const filterEvents = (user) => {
+  document.querySelector('#allBtn').addEventListener('click', () => {
+    getVocab(user.uid).then(showCards);
+  });
   document.querySelector('#htmlBtn').addEventListener('click', () => {
     htmlVocab(user.uid).then(showCards);
   });
