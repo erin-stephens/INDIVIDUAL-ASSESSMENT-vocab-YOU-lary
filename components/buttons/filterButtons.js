@@ -7,4 +7,15 @@ const filterButtonRow = () => {
   document.querySelector('#filterButtons').innerHTML = (domString);
 };
 
-export default filterButtonRow;
+const sortDropdown = () => {
+  const domString = `
+  <select class="form-select" aria-label="Default select example" id="sort" required>
+      <option selected>Sort By</option>
+      <option id="alpha">Alphabetically</option>
+      <option id="old">Oldest</option>
+      <option id="new">Newest</option>
+    </select>`;
+  document.querySelector('#sortDrop').innerHTML = (domString);
+};
+
+export { filterButtonRow, sortDropdown };

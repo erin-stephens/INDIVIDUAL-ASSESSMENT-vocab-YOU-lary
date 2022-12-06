@@ -115,6 +115,51 @@ const jsVocab = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const sortAlpha = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const alpha = Object.values(data).sort((a, b) => a.title.localeCompare(b.title));
+      resolve(alpha);
+    })
+    .catch(reject);
+});
+
+const sortNew = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const newTime = Object.values(data).sort((b, a) => a.time.localeCompare(b.time));
+      resolve(newTime);
+    })
+    .catch(reject);
+});
+
+const sortOld = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const oldTime = Object.values(data).sort((a, b) => a.time.localeCompare(b.time));
+      resolve(oldTime);
+    })
+    .catch(reject);
+});
+
 export {
   getVocab,
   createVocab,
@@ -123,5 +168,8 @@ export {
   getSingleVocab,
   htmlVocab,
   scssVocab,
-  jsVocab
+  jsVocab,
+  sortAlpha,
+  sortNew,
+  sortOld
 };
