@@ -11,11 +11,12 @@ body {
 
 #cardContainer {
   display: flex;
-  flex: wrap;
+  flex-flow: row wrap;
 }
 
 .card {
   width: 18em;
+  margin: 10px;
 }
 
 #logout-button {
