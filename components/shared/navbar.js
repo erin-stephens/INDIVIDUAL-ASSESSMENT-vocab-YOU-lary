@@ -19,7 +19,7 @@ const navBar = () => {
       </ul>
       <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
-      <button class="btn btn-outline-success" type="submit" id="searchBtn">Search</button>
+      <button class="btn btn-outline-secondary" type="submit" id="searchBtn">Search</button>
     </form>
       <span class="navbar-text">
         <div id="logout-button"></div>
