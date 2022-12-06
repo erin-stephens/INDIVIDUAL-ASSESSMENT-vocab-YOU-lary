@@ -17,6 +17,10 @@ const navBar = () => {
           <h4><a class="nav-link active" aria-current="page" href="#" id="add-button">Create Entry</a></h4>
         </li>
       </ul>
+      <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+      <button class="btn btn-outline-success" type="submit" id="searchBtn">Search</button>
+    </form>
       <span class="navbar-text">
         <div id="logout-button"></div>
     </div>
